@@ -124,7 +124,7 @@ const Home = () => {
             <img
             src={!isPlayingMusic ? soundoff : soundon}
             alt="sound"
-            className="w-10 h-10 cursor-pointer object-contain"
+            className="w-10 h-10 cursor-pointer object-contain transform transition-all duration-300 hover:scale-110"
             onClick={()=>setIsPlayingMusic(!isPlayingMusic)}/>
           </div>
         </Suspense>

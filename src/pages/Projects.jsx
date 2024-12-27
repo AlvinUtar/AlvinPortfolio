@@ -47,14 +47,14 @@ const Projects = () => {
                   to={project.link}
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="font-semibold text-blue-600"
+                  className="font-semibold text-blue-600 transform transition-all duration-300 hover:scale-110"
                 >
                   Live Link
                 </Link>
                 <img
                   src={arrow}
                   alt="arrow"
-                  className="w-4 h-4 object-contain"
+                  className="w-4 h-4 object-contain transform transition-all duration-300 hover:scale-110"
                 />
               </div>
             </div>

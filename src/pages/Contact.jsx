@@ -129,7 +129,7 @@ const Contact = () => {
           <button
             type="submit"
             disabled={loading}
-            className="btn"
+            className="btn transform transition-all duration-300 hover:scale-110"
             onFocus={handleFocus}
             onBlur={handleBlur}
           >
