@@ -30,6 +30,7 @@ import malaysia from './malaysia.svg'
 import python from './python.svg'
 import flutter from './flutter.svg'
 import figma from './figma.svg'
+import firebase from './firebase.svg'
 
 export {
     css,
@@ -63,5 +64,6 @@ export {
     malaysia,
     python,
     flutter,
-    figma
+    figma,
+    firebase
 }

@@ -27,7 +27,8 @@ import {
     typescript,
     python,
     flutter,
-    figma
+    figma,
+    firebase
 } from "../assets/icons";
 
 export const skills = [
@@ -45,6 +46,11 @@ export const skills = [
         imageUrl: javascript,
         name: "Javascript",
         type: "Version Control",
+    },
+    {
+        imageUrl: firebase,
+        name: "Firebase",
+        type: "Database",
     },
     {
         imageUrl: github,
