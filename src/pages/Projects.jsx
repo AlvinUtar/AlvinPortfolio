@@ -85,7 +85,7 @@ const Projects = () => {
             <img
               src={expo1}
               alt="Smart Nation Expo 2024 Photo 1"
-              className="w-full h-auto rounded-xl object-cover"
+              className="w-full h-auto rounded-xl object-cover transform transition-all duration-300 hover:scale-105"
             />
             <h4 className="mt-5 text-2xl font-poppins font-semibold">
               Franka Emika Robotic Arm
@@ -99,7 +99,7 @@ const Projects = () => {
             <img
               src={expo2}
               alt="Smart Nation Expo 2024 Photo 2"
-              className="w-full h-auto rounded-xl object-cover"
+              className="w-full h-auto rounded-xl object-cover transform transition-all duration-300 hover:scale-105"
             />
             <h4 className="mt-5 text-2xl font-poppins font-semibold">
               Tech Exhibition & Talk

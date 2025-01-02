@@ -19,33 +19,36 @@ const About = () => {
 
       <div className="mt-5 flex flex-col gap-3 text-slate-500">
         <p>
-          Software Engineer based in Malaysia, specializing in mobile app
-          developement.
+          Software Engineer based in Malaysia, specializing in mobile & web
+          application developement.
         </p>
       </div>
 
       <div className="py-10 flex flex-col">
         <h3 className="subhead-text">My Skills</h3>
         <div className="mt-16 flex flex-wrap gap-12 justify-center">
-  {skills.map((skill, index) => (
-    <div
-      key={index}
-      className="circle-container w-28 h-28 flex justify-center items-center bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg relative group"
-    >
-      <img
-        src={skill.imageUrl}
-        alt={skill.name}
-        className="w-1/2 h-1/2 object-contain"
-      />
-      
-      {/* Tooltip */}
-      <div className="skill-tooltip absolute bottom-0 left-0 w-full text-center bg-black text-white p-2 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-        {skill.name}
-      </div>
-    </div>
-  ))}
-</div>
+          {skills.map((skill, index) => (
+            <div
+              key={index}
+              className={`circle-container w-28 h-28 flex justify-center items-center bg-gradient-to-r from-blue-500 to-purple-500 shadow-lg relative group`}
+            >
+              <img
+                src={skill.imageUrl}
+                alt={skill.name}
+                className={`object-contain ${
+                  skill.name === "Laravel" || skill.name === "PHP"
+                    ? "w-3/4 h-3/4"
+                    : "w-1/2 h-1/2"
+                }`}
+              />
 
+              {/* Tooltip */}
+              <div className="skill-tooltip absolute bottom-0 left-0 w-full text-center bg-black text-white p-2 text-xs opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                {skill.name}
+              </div>
+            </div>
+          ))}
+        </div>
       </div>
 
       <div className="py-16">
@@ -97,11 +100,11 @@ const About = () => {
                     {experiences.company_name}
                   </p>
                 </div>
-                <ul className="my-5 list-disc ml-5 space-2">
+                <ul className="my-5 list-disc ml-5 space-2 text-justify">
                   {experiences.points.map((point, index) => (
                     <li
                       key={`experiences-point-${index}`}
-                      className="text-black-500/50 font-normal pl-1 text-sm"
+                      className="text-black-500/50 font-normal pl-1 text-sm mb-3"
                     >
                       {point}
                     </li>

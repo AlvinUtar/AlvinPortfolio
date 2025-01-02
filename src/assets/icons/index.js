@@ -31,6 +31,8 @@ import python from './python.svg'
 import flutter from './flutter.svg'
 import figma from './figma.svg'
 import firebase from './firebase.svg'
+import laravel from './laravel.svg'
+import php from './php.svg'
 
 export {
     css,
@@ -65,5 +67,7 @@ export {
     python,
     flutter,
     figma,
-    firebase
+    firebase,
+    laravel,
+    php
 }

@@ -28,7 +28,9 @@ import {
     python,
     flutter,
     figma,
-    firebase
+    firebase,
+    laravel,
+    php
 } from "../assets/icons";
 
 export const skills = [
@@ -56,6 +58,16 @@ export const skills = [
         imageUrl: github,
         name: "GitHub",
         type: "Version Control",
+    },
+    {
+        imageUrl: laravel,
+        name: "Laravel",
+        type: "Frontend",
+    },
+    {
+        imageUrl: php,
+        name: "PHP",
+        type: "Frontend",
     },
     {
         imageUrl: flutter,
@@ -117,10 +129,10 @@ export const experiences = [
         iconBg: "#fff",
         date: "Oct 2024 - Present",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Developed a Task Management App to improve task distribution efficiency, featuring Ongoing Projects, Daily Tasks, and Group Chat functionalities.",
+            "Designed and created a Figma dashboard for seamless user experience and project management.",
+            "Worked on 3D modeling projects to enhance product visualization.",
+            "Participated as an exhibitor in Smart Nation Expo 2024 (TM ONE), showcasing the Franka Emika Robotic Arm.",
         ],
     },
     {
@@ -128,12 +140,11 @@ export const experiences = [
         company_name: "Uncle Don's Restaurants",
         icon: uncledon,
         iconBg: "#fff",
-        date: "Jan 2021 - Jan 2022",
+        date: "Oct 2023 - Dec 2023 (Sem Break Part-Time)",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Process payments accurately, manage transactions, and resolve billing issues professionally.",
+            "Prepare and serve alcoholic drinks and specialty beverages according to standard recipes with proper presentation.",
+            "Deliver food and beverages to customers efficiently while ensuring order accuracy and excellent customer service.",
         ],
     },
     {
@@ -141,12 +152,11 @@ export const experiences = [
         company_name: "Manjung Badminton Club",
         icon: mbc,
         iconBg: "#fff",
-        date: "Jan 2021 - Feb 2022",
+        date: "Oct 2022 - Dec 2022 (Sem Break Part-Time)",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Manage court reservations, update schedules, and ensure proper allocation of court usage for members.",
+            "Greet members and visitors warmly, handle registrations, and provide information about club facilities and services.",
+            "Process membership fees, court bookings, and other payments accurately using the POS system.",
         ],
     },
 
@@ -155,12 +165,11 @@ export const experiences = [
         company_name: "Tealive",
         icon: tealive,
         iconBg: "#fff",
-        date: "Jan 2020 - Jan 2021",
+        date: "Jan 2021 - May 2021 (Sem Break Part-Time)",
         points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
+            "Craft and serve a variety of Tealive beverages, including tea, coffee, and specialty drinks, following standard recipes and presentation guidelines.",
+            "Greet customers warmly, take orders accurately, and ensure a pleasant experience by addressing any inquiries or requests.",
+            "Monitor inventory levels, restock ingredients and supplies, and maintain cleanliness and organization of the work area.",
         ],
     },
 ];
@@ -198,7 +207,7 @@ export const projects = [
         theme: 'btn-back-green',
         name: 'AI Workout Planner & Tracker',
         description: "Boosted workout planning by integrating Google Gemini API and Firebase Firestore for personalized plans, progress tracking, and social sharing; added Google Places API for gym discovery and accelerometer data for exercise tracking; created a social feed, increasing user engagement.",
-        link: 'https://github.com/adrianhajdin/threads',
+        link: 'https://github.com/AlvinUtar/expoahli',
         sublink: 'https://www.behance.net/gallery/214832959/AI-Workout-Planner-Tracker',
     },
     {

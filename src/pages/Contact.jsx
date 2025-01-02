@@ -13,6 +13,8 @@ const Contact = () => {
   const { alert, showAlert, hideAlert } = useAlert();
   const [loading, setLoading] = useState(false);
   const [currentAnimation, setCurrentAnimation] = useState("idle");
+  const [showTooltip, setShowTooltip] = useState(false);
+
 
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
@@ -32,9 +34,9 @@ const Contact = () => {
         import.meta.env.VITE_APP_EMAILJS_TEMPLATE_ID,
         {
           from_name: form.name,
-          to_name: "JavaScript Mastery",
+          to_name: "Alvin Tam Yun Jie",
           from_email: form.email,
-          to_email: "sujata@jsmastery.pro",
+          to_email: "alvintamwork@gmail.com",
           message: form.message,
         },
         import.meta.env.VITE_APP_EMAILJS_PUBLIC_KEY
@@ -139,6 +141,24 @@ const Contact = () => {
       </div>
 
       <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
+      {/* Tooltip */}
+      {showTooltip && (
+          <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10 bg-white p-4 rounded-lg shadow-lg">
+            <div className="relative bg-white rounded-lg px-4 py-3">
+              <p className="text-gray-800 text-sm">
+                When you type, I walk! When you submit, I run! 🦊
+              </p>
+              {/* Add a little triangle pointer at the bottom */}
+              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white"></div>
+            </div>
+          </div>
+        )}
+
+        <div 
+          className="relative w-full h-full"
+          onMouseEnter={() => setShowTooltip(true)}
+          onMouseLeave={() => setShowTooltip(false)}
+        >
         <Suspense fallback={<Loader />}>
           <Canvas
             camera={{
@@ -168,6 +188,7 @@ const Contact = () => {
             </Suspense>
           </Canvas>
         </Suspense>
+      </div>
       </div>
     </section>
   );
