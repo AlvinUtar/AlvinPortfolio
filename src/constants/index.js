@@ -93,7 +93,7 @@ export const skills = [
     },
     {
         imageUrl: python,
-        name: "React",
+        name: "Python",
         type: "Frontend",
     },
     {
