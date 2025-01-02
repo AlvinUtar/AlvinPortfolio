@@ -56,6 +56,16 @@ const Home = () => {
   const [currentStage, setCurrentStage] = useState(1);
   const [isPlayingMusic, setIsPlayingMusic] = useState(false);
 
+  useEffect(() => {
+    document.body.style.overflowY = 'hidden';
+    document.body.style.overflowX = 'auto';
+    
+    return () => {
+      document.body.style.overflowY = 'auto';
+      document.body.style.overflowX = 'auto';
+    };
+  }, []);
+
   useEffect(()=>{
     if(isPlayingMusic){
         audioRef.current.play();
@@ -64,6 +74,7 @@ const Home = () => {
         audioRef.current.pause();
     }
   },[isPlayingMusic])
+
   const adjustIslandForScreenSize = () => {
     let screenScale = null;
     let screenPosition = [0, -6.5, -43];
@@ -96,8 +107,8 @@ const Home = () => {
   const [planeScale, planePosition] = adjustPlaneForScreenSize();
 
   return (
-    <section className="w-full h-screen relative">
-      <div className="absolute top-28 left-0 right-0 z-10 flex items-center justify-center">
+    <section className="w-full h-screen fixed overflow-y-hidden overflow-x-auto">
+      <div className="fixed top-28 left-0 right-0 z-10 flex items-center justify-center">
         {currentStage && <HomeInfo currentStage={currentStage} />}
       </div>
 
@@ -120,7 +131,7 @@ const Home = () => {
               planePosition={planePosition}
             />
           </Canvas>
-          <div className="absolute bottom-2 left-2">
+          <div className="fixed bottom-2 left-2">
             <img
             src={!isPlayingMusic ? soundoff : soundon}
             alt="sound"

@@ -15,7 +15,6 @@ const Contact = () => {
   const [currentAnimation, setCurrentAnimation] = useState("idle");
   const [showTooltip, setShowTooltip] = useState(false);
 
-
   const handleChange = ({ target: { name, value } }) => {
     setForm({ ...form, [name]: value });
   };
@@ -141,54 +140,54 @@ const Contact = () => {
       </div>
 
       <div className="lg:w-1/2 w-full lg:h-auto md:h-[550px] h-[350px]">
-      {/* Tooltip */}
-      {showTooltip && (
-          <div className="absolute top-4 left-1/2 transform -translate-x-1/2 z-10 bg-white p-4 rounded-lg shadow-lg">
-            <div className="relative bg-white rounded-lg px-4 py-3">
-              <p className="text-gray-800 text-sm">
-                When you type, I walk! When you submit, I run! 🦊
-              </p>
-              {/* Add a little triangle pointer at the bottom */}
-              <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-0 h-0 border-l-8 border-r-8 border-t-8 border-transparent border-t-white"></div>
-            </div>
-          </div>
-        )}
-
         <div 
           className="relative w-full h-full"
           onMouseEnter={() => setShowTooltip(true)}
           onMouseLeave={() => setShowTooltip(false)}
         >
-        <Suspense fallback={<Loader />}>
-          <Canvas
-            camera={{
-              position: [0, 0, 5],
-              fov: 75,
-              near: 0.1,
-              far: 1000,
-            }}
-          >
-            <directionalLight position={[0, 0, 1]} intensity={2.5} />
-            <ambientLight intensity={1} />
-            <pointLight position={[5, 10, 0]} intensity={2} />
-            <spotLight
-              position={[10, 10, 10]}
-              angle={0.15}
-              penumbra={1}
-              intensity={2}
-            />
+          {/* Chat Bubble Tooltip */}
+          {showTooltip && (
+            <div className="absolute top-8 left-1/2 transform -translate-x-1/2 z-10">
+              <div className="relative bg-white rounded-2xl px-4 py-3 shadow-lg border border-gray-200">
+                <p className="text-gray-800 text-sm whitespace-nowrap">
+                  When you type, I walk! When you submit, I run! 🦊
+                </p>
+                {/* Chat bubble pointer */}
+                <div className="absolute -bottom-2 left-1/2 transform -translate-x-1/2 w-4 h-4 rotate-45 bg-white border-r border-b border-gray-200"></div>
+              </div>
+            </div>
+          )}
 
-            <Suspense fallback={null}>
-              <Fox
-                currentAnimation={currentAnimation}
-                position={[0.5, 0.35, 0]}
-                rotation={[12.629, -0.6, 0]}
-                scale={[0.5, 0.5, 0.5]}
+          <Suspense fallback={<Loader />}>
+            <Canvas
+              camera={{
+                position: [0, 0, 5],
+                fov: 75,
+                near: 0.1,
+                far: 1000,
+              }}
+            >
+              <directionalLight position={[0, 0, 1]} intensity={2.5} />
+              <ambientLight intensity={1} />
+              <pointLight position={[5, 10, 0]} intensity={2} />
+              <spotLight
+                position={[10, 10, 10]}
+                angle={0.15}
+                penumbra={1}
+                intensity={2}
               />
-            </Suspense>
-          </Canvas>
-        </Suspense>
-      </div>
+
+              <Suspense fallback={null}>
+                <Fox
+                  currentAnimation={currentAnimation}
+                  position={[0.95, 0.05, 0]}
+                  rotation={[12.629, -0.65, 0]}
+                  scale={[0.6, 0.6, 0.6]}
+                />
+              </Suspense>
+            </Canvas>
+          </Suspense>
+        </div>
       </div>
     </section>
   );
