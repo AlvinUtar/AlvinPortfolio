@@ -1,5 +1,6 @@
-import { meta, shopify, starbucks, tesla } from "../assets/images";
+import { mbc, meta, shopify, starbucks, tealive, tesla, ubct, uncledon } from "../assets/images";
 import {
+    malaysia,
     car,
     contact,
     css,
@@ -23,23 +24,26 @@ import {
     summiz,
     tailwindcss,
     threads,
-    typescript
+    typescript,
+    python,
+    flutter,
+    figma
 } from "../assets/icons";
 
 export const skills = [
     {
-        imageUrl: css,
-        name: "CSS",
+        imageUrl: react,
+        name: "React",
         type: "Frontend",
     },
     {
         imageUrl: express,
-        name: "Express",
+        name: "Expo GO",
         type: "Backend",
     },
     {
-        imageUrl: git,
-        name: "Git",
+        imageUrl: javascript,
+        name: "Javascript",
         type: "Version Control",
     },
     {
@@ -48,24 +52,39 @@ export const skills = [
         type: "Version Control",
     },
     {
+        imageUrl: flutter,
+        name: "Flutter",
+        type: "Frontend",
+    },
+    {
+        imageUrl: figma,
+        name: "Figma",
+        type: "Frontend",
+    },
+    {
         imageUrl: html,
         name: "HTML",
         type: "Frontend",
     },
     {
-        imageUrl: javascript,
-        name: "JavaScript",
+        imageUrl: css,
+        name: "CSS",
         type: "Frontend",
     },
     {
-        imageUrl: mongodb,
+        imageUrl: tailwindcss,
         name: "MongoDB",
         type: "Database",
     },
     {
-        imageUrl: motion,
-        name: "Motion",
+        imageUrl: nextjs,
+        name: "Next.JS",
         type: "Animation",
+    },
+    {
+        imageUrl: nodejs,
+        name: "Node.JS",
+        type: "Backend",
     },
     {
         imageUrl: mui,
@@ -73,33 +92,8 @@ export const skills = [
         type: "Frontend",
     },
     {
-        imageUrl: nextjs,
-        name: "Next.js",
-        type: "Frontend",
-    },
-    {
-        imageUrl: nodejs,
-        name: "Node.js",
-        type: "Backend",
-    },
-    {
-        imageUrl: react,
+        imageUrl: python,
         name: "React",
-        type: "Frontend",
-    },
-    {
-        imageUrl: redux,
-        name: "Redux",
-        type: "State Management",
-    },
-    {
-        imageUrl: sass,
-        name: "Sass",
-        type: "Frontend",
-    },
-    {
-        imageUrl: tailwindcss,
-        name: "Tailwind CSS",
         type: "Frontend",
     },
     {
@@ -111,11 +105,11 @@ export const skills = [
 
 export const experiences = [
     {
-        title: "React.js Developer",
-        company_name: "Starbucks",
-        icon: starbucks,
-        iconBg: "#accbe1",
-        date: "March 2020 - April 2021",
+        title: "Software Engineer Intern",
+        company_name: "UBCT Sdn Bhd",
+        icon: ubct,
+        iconBg: "#fff",
+        date: "Oct 2024 - Present",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -124,10 +118,23 @@ export const experiences = [
         ],
     },
     {
-        title: "React Native Developer",
-        company_name: "Tesla",
-        icon: tesla,
-        iconBg: "#fbc3bc",
+        title: "Server",
+        company_name: "Uncle Don's Restaurants",
+        icon: uncledon,
+        iconBg: "#fff",
+        date: "Jan 2021 - Jan 2022",
+        points: [
+            "Developing and maintaining web applications using React.js and other related technologies.",
+            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
+            "Implementing responsive design and ensuring cross-browser compatibility.",
+            "Participating in code reviews and providing constructive feedback to other developers.",
+        ],
+    },
+    {
+        title: "Front Desk",
+        company_name: "Manjung Badminton Club",
+        icon: mbc,
+        iconBg: "#fff",
         date: "Jan 2021 - Feb 2022",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
@@ -136,25 +143,13 @@ export const experiences = [
             "Participating in code reviews and providing constructive feedback to other developers.",
         ],
     },
+
     {
-        title: "Web Developer",
-        company_name: "Shopify",
-        icon: shopify,
-        iconBg: "#b7e4c7",
-        date: "Jan 2022 - Jan 2023",
-        points: [
-            "Developing and maintaining web applications using React.js and other related technologies.",
-            "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
-            "Implementing responsive design and ensuring cross-browser compatibility.",
-            "Participating in code reviews and providing constructive feedback to other developers.",
-        ],
-    },
-    {
-        title: "Full stack Developer",
-        company_name: "Meta",
-        icon: meta,
-        iconBg: "#a2d2ff",
-        date: "Jan 2023 - Present",
+        title: "Barista",
+        company_name: "Tealive",
+        icon: tealive,
+        iconBg: "#fff",
+        date: "Jan 2020 - Jan 2021",
         points: [
             "Developing and maintaining web applications using React.js and other related technologies.",
             "Collaborating with cross-functional teams including designers, product managers, and other developers to create high-quality products.",
@@ -186,43 +181,33 @@ export const projects = [
     {
         iconUrl: pricewise,
         theme: 'btn-back-red',
-        name: 'Amazon Price Tracker',
-        description: 'Developed a web application that tracks and notifies users of price changes for products on Amazon, helping users find the best deals.',
-        link: 'https://github.com/adrianhajdin/pricewise',
+        name: 'Task Management App',
+        description: 'Developed a mobile application that can help user to assign projects, daily task, calendar agenda, with group chat features and notifications alert.',
+        link: 'https://github.com/AlvinUtar/Todo-App',
+        sublink:"https://www.behance.net/gallery/215764647/Task-Management-App"
+        
     },
     {
         iconUrl: threads,
         theme: 'btn-back-green',
-        name: 'Full Stack Threads Clone',
-        description: 'Created a full-stack replica of the popular discussion platform "Threads," enabling users to post and engage in threaded conversations.',
+        name: 'AI Workout Planner & Tracker',
+        description: "Boosted workout planning by integrating Google Gemini API and Firebase Firestore for personalized plans, progress tracking, and social sharing; added Google Places API for gym discovery and accelerometer data for exercise tracking; created a social feed, increasing user engagement.",
         link: 'https://github.com/adrianhajdin/threads',
+        sublink: 'https://www.behance.net/gallery/214832959/AI-Workout-Planner-Tracker',
     },
     {
-        iconUrl: car,
+        iconUrl: malaysia,
         theme: 'btn-back-blue',
-        name: 'Car Finding App',
-        description: 'Designed and built a mobile app for finding and comparing cars on the market, streamlining the car-buying process.',
-        link: 'https://github.com/adrianhajdin/project_next13_car_showcase',
+        name: 'Malaysia Cultural Website',
+        description: 'Developed a mobile responsiveness Architecture Page, showcasing Malaysia\'s iconic structures and cultural insights with interactive features like the "Explore Ethnic" button.',
+        link: 'https://www.behance.net/gallery/214837901/Cultural-Website',
     },
     {
         iconUrl: snapgram,
         theme: 'btn-back-pink',
-        name: 'Full Stack Instagram Clone',
-        description: 'Built a complete clone of Instagram, allowing users to share photos and connect with friends in a familiar social media environment.',
-        link: 'https://github.com/adrianhajdin/social_media_app',
+        name: 'RFID Cabinet Dashboard Design',
+        description: 'Designing a dashboard for RFID cabinet system, with features like user management, inventory tracking, and real-time notifications in Figma.',
+        link: 'https://www.figma.com/proto/vwoVA3W5bXzsEEy0ro4G4z/RFID-Cabinet?node-id=1-2&p=f&t=PGtyMEF2qYA6oS40-1&scaling=contain&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=1%3A2',
     },
-    {
-        iconUrl: estate,
-        theme: 'btn-back-black',
-        name: 'Real-Estate Application',
-        description: 'Developed a web application for real estate listings, facilitating property searches and connecting buyers with sellers.',
-        link: 'https://github.com/adrianhajdin/projects_realestate',
-    },
-    {
-        iconUrl: summiz,
-        theme: 'btn-back-yellow',
-        name: 'AI Summarizer Application',
-        description: 'App that leverages AI to automatically generate concise & informative summaries from lengthy text content, or blogs.',
-        link: 'https://github.com/adrianhajdin/project_ai_summarizer',
-    }
+    
 ];
