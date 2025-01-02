@@ -73,7 +73,7 @@ export const skills = [
     },
     {
         imageUrl: tailwindcss,
-        name: "MongoDB",
+        name: "Tailwind CSS",
         type: "Database",
     },
     {
