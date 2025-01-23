@@ -33,6 +33,7 @@ import figma from './figma.svg'
 import firebase from './firebase.svg'
 import laravel from './laravel.svg'
 import php from './php.svg'
+import home from './home.svg'
 
 export {
     css,
@@ -69,5 +70,6 @@ export {
     figma,
     firebase,
     laravel,
-    php
+    php,
+    home
 }

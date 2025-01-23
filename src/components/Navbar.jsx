@@ -1,3 +1,4 @@
+import { QuadraticBezierLine } from "@react-three/drei";
 import React, { useState, useEffect } from "react";
 import { NavLink, useLocation } from "react-router-dom";
 
@@ -11,23 +12,23 @@ const Navbar = () => {
     const updateNavbar = () => {
       const scrollY = window.scrollY;
       const isScrollingDown = scrollY > lastScrollY;
-      
+
       setIsScrolled(isScrollingDown && scrollY > 10);
       lastScrollY = scrollY;
     };
 
-    window.addEventListener('scroll', updateNavbar, { passive: true });
-    
+    window.addEventListener("scroll", updateNavbar, { passive: true });
+
     return () => {
-      window.removeEventListener('scroll', updateNavbar);
+      window.removeEventListener("scroll", updateNavbar);
     };
   }, []);
 
   return (
-    <header 
+    <header
       className={`fixed top-0 left-0 right-0 z-50 py-5 px-8 flex justify-between items-center transition-all duration-300 ease-in-out ${
-        isScrolled ? '-translate-y-full' : 'translate-y-0'
-      } ${location.pathname === '/' ? 'bg-transparent' : 'bg-white shadow-md'}`}
+        isScrolled ? "-translate-y-full" : "translate-y-0"
+      } ${location.pathname === "/" ? "bg-transparent" : "bg-white shadow-md"}`}
     >
       <NavLink
         to="/"

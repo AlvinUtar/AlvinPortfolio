@@ -30,7 +30,8 @@ import {
     figma,
     firebase,
     laravel,
-    php
+    php,
+    home
 } from "../assets/icons";
 
 export const skills = [
@@ -193,6 +194,15 @@ export const socialLinks = [
 ];
 
 export const projects = [
+    {
+        iconUrl: home,
+        theme: 'btn-back-yellow',
+        name: 'Real Estate App',
+        description: 'Build a full-stack Real Estate application with React Native, featuring Google authentication, dynamic property listings, and user profiles. Designed with modern tools like Expo SDK 52, Appwrite, Tailwind CSS, and TypeScript for a seamless and scalable experience.',
+        link: 'https://expo.dev/preview/update?message=Latest&updateRuntimeVersion=1.0.0&createdAt=2025-01-23T07%3A08%3A21.905Z&slug=exp&projectId=d0fa3bfe-7ba4-42f0-9497-dad6905400cb&group=58a0a4aa-83e1-4909-99aa-10c74c7b77d8',
+        sublink:"https://www.behance.net/gallery/217525999/React-Native-Real-Estate"
+        
+    },
     {
         iconUrl: pricewise,
         theme: 'btn-back-red',
